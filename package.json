@@ -7,6 +7,7 @@
   "engines": {
     "vscode": "^0.10.1"
   },
+  "icon": "icon.png",
   "categories": [
     "Other"
   ],
@@ -27,6 +28,6 @@
     "vscode": "0.10.x"
   },
   "dependencies": {
-    "righteous": "1.1.2"
+    "righteous": "1.1.3"
   }
 }
