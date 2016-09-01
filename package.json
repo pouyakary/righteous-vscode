@@ -27,6 +27,6 @@
     "vscode": "0.10.x"
   },
   "dependencies": {
-    "righteous": "*"
+    "righteous": "1.1.2"
   }
 }
