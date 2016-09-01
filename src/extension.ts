@@ -1,9 +1,12 @@
 
+
 //
 // Righteous for Visual Studio Code.
 //    Copyright 2016 by Kary Foundation. Inc.
 //    Author: Pouya Kary <k@karyfoundation.org>
 //
+
+    /// <reference path="../node_modules/righteous/typings/righteous.d.ts" />
 
 //
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
