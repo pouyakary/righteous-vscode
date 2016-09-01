@@ -15,7 +15,8 @@
   ],
   "main": "./out/src/extension",
   "activationEvents": [
-	"onLanguage:typescript"
+	  "onLanguage:typescript",
+    "onLanguage:javascript"
   ],
   "scripts": {
     "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
