@@ -1,0 +1,31 @@
+{
+  "name": "righteous-vscode",
+  "displayName": "Righteous",
+  "description": "Kary Foundation Coding Style's Code Formatter for TypeScript and JavaScript",
+  "version": "0.0.1",
+  "publisher": "karyfoundation",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.sayHello"
+  ],
+  "main": "./out/src/extension",
+  "activationEvents": [
+	"onLanguage:typescript"
+  ],
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^1.6.2",
+    "vscode": "0.10.x"
+  },
+  "dependencies": {
+    "righteous": "^1.1.0"
+  }
+}
