@@ -11,12 +11,10 @@
 //
     
     export function format ( document: vscode.TextDocument, range: vscode.Range, options: vscode.FormattingOptions ) {
-    
-        if ( range === null ) {
-            var start = new vscode.Position( 0, 0 );
-            var end = new vscode.Position( document.lineCount - 1, document.lineAt( document.lineCount - 1 ).text.length );
-            range = new vscode.Range( start, end );
-        }
+
+        var start = new vscode.Position( 0, 0 );
+        var end = new vscode.Position( document.lineCount - 1, document.lineAt( document.lineCount - 1 ).text.length );
+        range = new vscode.Range( start, end );
     
         var result: vscode.TextEdit[ ] = [ ];
     
