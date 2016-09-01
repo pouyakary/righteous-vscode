@@ -42,41 +42,26 @@
     // this method is called when your extension is activated
     // your extension is activated the very first time the command is executed
     export function activate ( context: vscode.ExtensionContext ) {
-        context.subscriptions.push(
-            vscode.languages.registerDocumentFormattingEditProvider( 'javascript', {
-                provideDocumentFormattingEdits: ( document, options, token ) => {
-                    return format( document, null, options )
-                }
-            })
-        );
-    
-        context.subscriptions.push(
-            vscode.languages.registerDocumentRangeFormattingEditProvider( 'javascript', {
-                provideDocumentRangeFormattingEdits: ( document, range, options, token ) => {
-                    var start = new vscode.Position( 0, 0 );
-                    var end = new vscode.Position( document.lineCount - 1, document.lineAt( document.lineCount - 1 ).text.length );
-                    return format( document, new vscode.Range( start, end ), options )
-                }
-            })
-        );
-    
-        context.subscriptions.push(
-            vscode.languages.registerDocumentFormattingEditProvider( 'typescript', {
-                provideDocumentFormattingEdits: ( document, options, token ) => {
-                    return format( document, null, options )
-                }
-            })
-        );
-    
-        context.subscriptions.push(
-            vscode.languages.registerDocumentRangeFormattingEditProvider( 'typescript', {
-                provideDocumentRangeFormattingEdits: ( document, range, options, token ) => {
-                    var start = new vscode.Position( 0, 0 );
-                    var end = new vscode.Position( document.lineCount - 1, document.lineAt( document.lineCount - 1 ).text.length );
-                    return format( document, new vscode.Range( start, end ), options )
-                }
-            })
-        );
+		for ( let language of ['typescript', 'javascript'] ) {
+
+			context.subscriptions.push(
+				vscode.languages.registerDocumentFormattingEditProvider( language, {
+					provideDocumentFormattingEdits: ( document, options, token ) => {
+						return format( document, null, options )
+					}
+				})
+			);
+		
+			context.subscriptions.push(
+				vscode.languages.registerDocumentRangeFormattingEditProvider( language, {
+					provideDocumentRangeFormattingEdits: ( document, range, options, token ) => {
+						var start = new vscode.Position( 0, 0 );
+						var end = new vscode.Position( document.lineCount - 1, document.lineAt( document.lineCount - 1 ).text.length );
+						return format( document, new vscode.Range( start, end ), options )
+					}
+				})
+			);
+		}
     }
     
 // ────────────────────────────────────────────────────────────────────────────────
