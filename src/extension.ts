@@ -6,14 +6,14 @@
 //    Author: Pouya Kary <k@karyfoundation.org>
 //
 
-    /// <reference path="../node_modules/righteous/typings/righteous.d.ts" />
+    /// <reference path="../node_modules/righteous-core/typings/righteous.d.ts" />
 
 //
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
     import * as vscode from 'vscode';
-    import righteous = require( 'righteous' );
+    import righteous = require( 'righteous-core' );
 
 //
 // ─── FORMAT ─────────────────────────────────────────────────────────────────────
