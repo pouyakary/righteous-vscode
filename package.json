@@ -13,7 +13,6 @@
   ],
   "main": "./out/src/extension",
   "activationEvents": [
-    "onCommand:extension.sayHello",
     "onLanguage:typescript",
     "onLanguage:javascript"
   ],
