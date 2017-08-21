@@ -11,12 +11,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:extension.sayHello"
-  ],
   "main": "./out/src/extension",
   "activationEvents": [
-	  "onLanguage:typescript",
+    "onLanguage:typescript",
     "onLanguage:javascript"
   ],
   "scripts": {
