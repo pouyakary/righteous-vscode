@@ -1,31 +1,36 @@
 {
-  "name": "righteous",
-  "displayName": "Righteous",
-  "description": "Kary Foundation Coding Style's Code Formatter for TypeScript and JavaScript",
-  "version": "2.0.0",
-  "publisher": "karyfoundation",
-  "engines": {
-    "vscode": "^0.10.1"
-  },
-  "icon": "icon.png",
-  "categories": [
-    "Other"
-  ],
-  "main": "./out/src/extension",
-  "activationEvents": [
-    "onLanguage:typescript",
-    "onLanguage:javascript",
-    "onLanguage:css"
-  ],
-  "scripts": {
-    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
-  },
-  "devDependencies": {
-    "typescript": "^1.6.2",
-    "vscode": "0.10.x"
-  },
-  "dependencies": {
-    "righteous-core": "^2.0.8"
-  }
+	"name": "righteous",
+	"displayName": "Righteous",
+	"description": "Kary Foundation Coding Style's Code Formatter for TypeScript and JavaScript",
+	"version": "2.0.0",
+	"publisher": "karyfoundation",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"icon": "icon.png",
+	"categories": [
+		"Other"
+	],
+	"main": "./out/src/extension",
+	"activationEvents": [
+		"onLanguage:typescript",
+		"onLanguage:javascript",
+		"onLanguage:css"
+	],
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	},
+	"dependencies": {
+		"righteous-core": "^2.0.15"
+	},
+	"__metadata": {
+		"id": "aff63b94-c6fe-4710-af46-8bd0c8f84f3b",
+		"publisherDisplayName": "Kary Foundation",
+		"publisherId": "00c37c0d-e370-4cc2-8ab3-3fa32a26514a"
+	}
 }

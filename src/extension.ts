@@ -15,30 +15,37 @@
 
     import * as vscode from 'vscode'
     import righteous = require( 'righteous-core' )
+import { languages } from 'vscode';
 
 //
 // ─── FORMAT ─────────────────────────────────────────────────────────────────────
 //
 
-    export function formatECMAScriptFamily ( document: vscode.TextDocument,
-                                                range: vscode.Range,
-                                              options: vscode.FormattingOptions,
-                                             language: string ) {
+    export function formatWithRighteous ( document: vscode.TextDocument,
+                                             range: vscode.Range,
+                                           options: vscode.FormattingOptions,
+                                          language: string ) {
 
-        const start = new vscode.Position( 0, 0 );
-        const end = new vscode.Position( document.lineCount - 1, document.lineAt( document.lineCount - 1 ).text.length )
-        const docRange = new vscode.Range( start, end )
+        const start =
+            new vscode.Position( 0, 0 );
+        const end =
+            new vscode.Position( document.lineCount - 1, document.lineAt( document.lineCount - 1 ).text.length )
+        const docRange =
+            new vscode.Range( start, end )
+        const result =
+            new Array<vscode.TextEdit>( )
+        const content =
+            document.getText( docRange )
 
-        const result = new Array<vscode.TextEdit>( )
-        const content = document.getText( docRange )
-
-        if ( !options )
+        if ( !options ) {
             options = { insertSpaces: true, tabSize: 4 }
+        }
 
         try {
             const formatted = formatBasedOnLanguage( content, language )
-            if ( formatted )
+            if ( formatted ) {
                 result.push( new vscode.TextEdit( docRange, formatted ) )
+            }
 
             return result
 
@@ -66,10 +73,11 @@
     // this method is called when your extension is activated
     // your extension is activated the very first time the command is executed
     export function activate ( context: vscode.ExtensionContext ) {
-        for ( let language of [ 'typescript', 'javascript' ] )
-            registerFormatter( language, context )
+        const languages =
+            [ 'typescript', 'javascript', 'css' ]
 
-        registerFormatter( 'css', context )
+        for ( const language of languages )
+            registerFormatter( language, context )
     }
 
 //
@@ -80,7 +88,7 @@
         context.subscriptions.push(
             vscode.languages.registerDocumentFormattingEditProvider( language, {
                 provideDocumentFormattingEdits: ( document, options, token ) => {
-                    return formatECMAScriptFamily( document, null, options, language )
+                    return formatWithRighteous( document, null, options, language )
                 }
             })
         )
@@ -92,7 +100,7 @@
                         new vscode.Position( 0, 0 )
                     const end =
                         new vscode.Position( document.lineCount - 1, document.lineAt( document.lineCount - 1 ).text.length )
-                    return formatECMAScriptFamily( document, new vscode.Range( start, end ), options, language )
+                    return formatWithRighteous( document, new vscode.Range( start, end ), options, language )
                 }
             })
         )
