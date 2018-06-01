@@ -26,11 +26,11 @@
 		"vscode": "0.10.x"
 	},
 	"dependencies": {
-		"righteous-core": "^2.0.21"
+		"righteous-core": "^2.0.22"
 	},
 	"__metadata": {
 		"id": "aff63b94-c6fe-4710-af46-8bd0c8f84f3b",
-		"publisherDisplayName": "Kary Foundation",
+		"publisherDisplayName": "Pouya Kary",
 		"publisherId": "00c37c0d-e370-4cc2-8ab3-3fa32a26514a"
 	}
 }
