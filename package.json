@@ -1,8 +1,8 @@
 {
 	"name": "righteous",
 	"displayName": "Righteous",
-	"description": "Kary Foundation Coding Style's Code Formatter for TypeScript and JavaScript",
-	"version": "2.0.7",
+	"description": "CSS Code Formatter Engine that implements the Kary Coding Standards",
+	"version": "2.1.0",
 	"publisher": "karyfoundation",
 	"engines": {
 		"vscode": "^0.10.1"
@@ -13,8 +13,6 @@
 	],
 	"main": "./out/src/extension",
 	"activationEvents": [
-		"onLanguage:typescript",
-		"onLanguage:javascript",
 		"onLanguage:css"
 	],
 	"scripts": {
@@ -26,7 +24,7 @@
 		"vscode": "0.10.x"
 	},
 	"dependencies": {
-		"righteous-core": "^2.0.26"
+		"righteous-core": "^2.1.0"
 	},
 	"__metadata": {
 		"id": "aff63b94-c6fe-4710-af46-8bd0c8f84f3b",

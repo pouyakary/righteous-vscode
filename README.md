@@ -1,12 +1,5 @@
 
 # Righteous for Visual Studio Code
-Kary Foundation's Code Formatter based on [Righteous](https://github.com/karyfoundation/righteous) engine for JavaScript and TypeScript. If you're using Kary Foundation's Comments and the Coding Style, this is the extension for you.
+[Righteous](https://coding.standards.kary.us/tools/righteous) is an __Experimental__ Code Formatter for CSS that implements the [Kary Coding Standard](https://coding.standards.kary.us/languages/css). It is written as a reconstructing formatter; It means righteous parses the code into an AST (abstract syntax tree) and then rewrites that tree to CSS. This technique ensures everything is based on the standard.
 
-![](https://cloud.githubusercontent.com/assets/2157285/18160189/78000084-7041-11e6-9cf0-7acad916e004.gif)
-
-If you're using KFCS comments and need a good generator we also have a [comment generator support for vscode](https://marketplace.visualstudio.com/items?itemName=karyfoundation.comment).
-
-<br />
-<a href="http://www.karyfoundation.org/">
-    <img src="http://www.karyfoundation.org/foundation/logo/github-full-horse.png" width="250"/>
-</a>
+![](https://user-images.githubusercontent.com/2157285/45589436-a1e23b80-b93a-11e8-9d99-5ee882b3dd03.gif)
