@@ -10,7 +10,7 @@
 	},
 	"icon": "icon.png",
 	"categories": [
-		"Other"
+		"Formatters"
 	],
 	"main": "./out/src/extension",
 	"activationEvents": [
