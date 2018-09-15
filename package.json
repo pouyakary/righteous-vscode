@@ -2,13 +2,17 @@
 	"name": "righteous",
 	"displayName": "Righteous",
 	"description": "CSS Code Formatter Engine that implements the Kary Coding Standards",
-	"version": "2.1.1",
+	"version": "2.1.3",
 	"publisher": "karyfoundation",
 	"repository": "https://github.com/pmkary/righteous-vscode",
 	"engines": {
 		"vscode": "^0.10.1"
 	},
 	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#140026",
+		"theme": "dark"
+	},
 	"categories": [
 		"Formatters"
 	],
